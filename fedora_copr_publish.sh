@@ -26,7 +26,7 @@ _tmp=${version_in_changelog%%)*}
 _tmp=${_tmp%%~*}
 version=${_tmp##*\(}
 
-_tmp=$(git tag --list system76-acpi-dkms-"$version"-'*' | sort -n -t '-' -k 4 -r | head -1)
+_tmp=$(git tag --list system76-acpi-dkms-"$version"-'*' | sort -n -t '-' -k 5 -r | head -1)
 release=${_tmp##*-}
 
 if [ "z$release" == "z" ]; then
